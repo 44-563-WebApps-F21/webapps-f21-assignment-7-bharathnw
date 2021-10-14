@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: red;
+        }
+        
+        .flex-container>div {
+            /*div children of the flex container*/
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+        /* Responsive layout */
+        
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                background-color: green;
+            }
+        }
+    </style>
+    <title>Learning Arrays</title>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <h2>Sreebharath Mallampati builds a stack</h2>
+    </div>
+    <div class="flex-container" id="target">
+    </div>
+    <br/>
+    <input type="text" class="form-control" name="" id="inpt">
+
+    <button class="btn btn-success" onclick="makeNewDiv()">Push value</button>
+
+
+</body>
+<script>
+    function makeNewDiv() {
+        let element = document.createElement("div")
+        element.innerHTML = document.getElementById('inpt').value;
+        element.className = "stack";
+        document.getElementById('target').appendChild(element);
+
+    }
+</script>
+
+</html>
