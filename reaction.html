@@ -31,22 +31,15 @@
         }
 
         function startTime() {
-            myTime;
-            buttonTime = Date.now();
-
-            for (let i = 0; i < 4; i++) {
+            let count = Math.floor(Math.random() * (10 + 2))
+            for (let i = 0; i < count; i++) {
                 setTimeout(() => {
                     document.getElementById("countdown").innerHTML = i;
-                }, (4 - i) * 1000);
+                }, (count - i) * 1000)
             }
             setTimeout(() => {
-                if (myTime == undefined) {
-                    document.getElementById("target").innerHTML = "Too Slow";
-                } else {
-                    let elapsedTime = (-1) * (buttonTime - myTime);
-                    document.getElementById("target").innerHTML = "Time was " + elapsedTime + " ms";
-                }
-            }, 3 * 1000)
+                checkMyTime()
+            }, 3000)
         }
     </script>
 

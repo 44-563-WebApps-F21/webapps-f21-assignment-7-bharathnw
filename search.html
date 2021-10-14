@@ -73,6 +73,9 @@
                 <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img23" onclick="check(23)" class="mw-80 group-img"></div>
             </div>
         </div>
+        <div class="col-sm-12">
+            <button class="btn btn-warning" onclick="reset()">Reset</button>
+        </div>
         <script>
             let ids = Array.from({
                 length: 23,
@@ -99,6 +102,17 @@
                 let pos2SetX = Math.ceil((pos2 + 1) % 6);
                 let distance = Math.max(Math.abs(pos2SetX - pos1SetX), Math.abs(pos2SetY - pos1SetY));
                 document.getElementById('distance').innerHTML = `Distance is ${distance}`;
+            }
+
+            function reset() {
+                triesCount = 0;
+                document.getElementById("tries").innerHTML = "Number of tries is zero";
+                distanceOfAnimal = "unknown"
+                document.getElementById("distance").innerHTML = "Distance is " + distanceOfAnimal;
+                for (var i = 0; i < 24; i++) {
+                    document.getElementById(ids[i]).src = "assets/bush.jpg";
+                }
+
             }
         </script>
 </body>

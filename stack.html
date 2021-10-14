@@ -42,6 +42,7 @@
     <button class="btn btn-success" onclick="makeNewDiv()">Push value</button>
     <button class="btn btn-success" onclick="popItem()">Pop</button>
     <button class="btn btn-success" onclick="zap()">Zap values</button>
+    <button class="btn btn-warning" onclick="unique()">Unique</button>
 
 
 </body>
@@ -71,7 +72,18 @@
                 element--;
             }
         }
+    }
 
+    function unique() {
+        let stackItems = document.getElementsByClassName('stack');
+        for (let i = stackItems.length - 1; i >= 0; i--) {
+            let item = stackItems[i].innerHTML;
+            for (let j = i - 1; j >= 0; j--) {
+                if (item == stackItems[j].innerHTML) {
+                    stackItems[j].remove();
+                }
+            }
+        }
     }
 </script>
 
