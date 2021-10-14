@@ -40,6 +40,8 @@
     <input type="text" class="form-control" name="" id="inpt">
 
     <button class="btn btn-success" onclick="makeNewDiv()">Push value</button>
+    <button class="btn btn-success" onclick="popItem()">Pop</button>
+    <button class="btn btn-success" onclick="zap()">Zap values</button>
 
 
 </body>
@@ -49,6 +51,26 @@
         element.innerHTML = document.getElementById('inpt').value;
         element.className = "stack";
         document.getElementById('target').appendChild(element);
+    }
+
+    function popItem() {
+        let stackItems = document.getElementsByClassName('stack');
+        if (stackItems.length > 0) {
+            stackItems[stackItems.length - 1].remove();
+        }
+    }
+
+    function zap() {
+        let stackItems = document.getElementsByClassName('stack');
+        let inputValue = document.getElementById('inpt').value;
+        for (let element = 0; element < stackItems.length; element++) {
+            let stackData = stackItems[element].innerHTML;
+            if (stackData == inputValue) {
+                console.log(stackItems[element], 'Removed');
+                stackItems[element].remove();
+                element--;
+            }
+        }
 
     }
 </script>
