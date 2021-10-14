@@ -16,10 +16,10 @@
     <div class="container">
         <h2>Sreebharat Mallampati reaction timer</h2>
         <p id="target">Your time</p>
-        <p id="countdown">Count</p>
+        <p id="countdown">Count </p>
         <hr/>
-        <button class="btn btn-primary">Start Timer</button>
-        <button class="btn btn-warning" onclick="recordReact()">React Now</button>
+        <button class="btn btn-primary" type="button" onclick="startTime()">Start Timer</button>
+        <button class="btn btn-warning" type="button" onclick="recordReact()">React Now</button>
     </div>
 
     <script>
@@ -30,16 +30,23 @@
             console.log(myTime, 'timer');
         }
 
-        function buttonPress1() {
-            setTimeout(function() {
-                document.getElementById('target').style.color = "red"
-            }, 3000)
-        }
+        function startTime() {
+            myTime;
+            buttonTime = Date.now();
 
-        function buttonPress2() {
+            for (let i = 0; i < 4; i++) {
+                setTimeout(() => {
+                    document.getElementById("countdown").innerHTML = i;
+                }, (4 - i) * 1000);
+            }
             setTimeout(() => {
-                document.getElementById('target').style.color = "red"
-            }, 3000)
+                if (myTime == undefined) {
+                    document.getElementById("target").innerHTML = "Too Slow";
+                } else {
+                    let elapsedTime = (-1) * (buttonTime - myTime);
+                    document.getElementById("target").innerHTML = "Time was " + elapsedTime + " ms";
+                }
+            }, 3 * 1000)
         }
     </script>
 
