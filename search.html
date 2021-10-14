@@ -10,15 +10,21 @@
     <style>
         #tries {
             text-align: center;
-            background-color: rgb(126, 96, 42);
+            background-color: #326dc1;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
         }
         
         #distance {
             text-align: center;
-            background-color: rgb(194, 184, 152);
+            background-color: rgb(175 228 207);
+            padding: 4px;
+            border-radius: 5px;
+            font-weight: 500;
         }
         
-        .grid-img {
+        .group-img {
             width: 100px;
             height: 100px;
             object-fit: cover;
@@ -28,47 +34,73 @@
 
 <body>
     <div class="container-fluid">
-        <h1 class=" text-center">Animal Hunt by Sreebharath Mallampati</h1><br>
+        <h1 class="text-center">Animal Hunt by Sreebharath Mallampati</h1><br>
         <p class="text-center">Click on the squares to search for wild life</p>
         <p id="tries">Number of tries is zero.</p>
         <p id="distance">Distance is unknown</p>
 
         <div class="image-grid d-flex flex-column justify-content-center align-items-center">
             <div class="image-row d-flex">
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img0" onclick="check(0)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img1" onclick="check(1)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img2" onclick="check(2)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img3" onclick="check(3)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img4" onclick="check(4)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img5" onclick="check(5)" class="mw-80 group-img"></div>
             </div>
             <div class="image-row d-flex">
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img6" onclick="check(6)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img7" onclick="check(7)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img8" onclick="check(8)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img9" onclick="check(9)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img10" onclick="check(10)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img11" onclick="check(11)" class="mw-80 group-img"></div>
             </div>
             <div class="image-row d-flex">
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img12" onclick="check(12)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img13" onclick="check(13)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img14" onclick="check(14)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img15" onclick="check(15)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img16" onclick="check(16)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img17" onclick="check(17)" class="mw-80 group-img"></div>
             </div>
             <div class="image-row d-flex">
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
-                <div class="image-col"><img src="bush.jpg" alt="bush Image" class="mw-80 grid-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img12" onclick="check(18)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img19" onclick="check(19)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img20" onclick="check(20)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img21" onclick="check(21)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img22" onclick="check(22)" class="mw-80 group-img"></div>
+                <div class="image-col"><img src="assets/bush.jpg" alt="Bush Image" id="img23" onclick="check(23)" class="mw-80 group-img"></div>
             </div>
-
-
         </div>
+        <script>
+            let ids = Array.from({
+                length: 23,
+            }, (v, i) => 'img' + i);
+            let triesCount = 0;
+            let animalLocation = 13;
+
+            function check(index) {
+                let imageId = ids[index];
+                triesCount++;
+                document.getElementById('tries').innerHTML = `Number of tries is ${triesCount}`;
+                console.log(imageId, document.getElementById(imageId));
+                if (animalLocation == index)
+                    document.getElementById(imageId).src = "assets/monkey.jpg";
+                else
+                    document.getElementById(imageId).src = "assets/wall.jpg";
+                distance(index, animalLocation);
+            }
+
+            function distance(pos1, pos2) {
+                let pos1SetY = Math.ceil((pos1 + 1) / 6);
+                let pos2SetY = Math.ceil((pos2 + 1) / 6);
+                let pos1SetX = Math.ceil((pos1 + 1) % 6);
+                let pos2SetX = Math.ceil((pos2 + 1) % 6);
+                let distance = Math.max(Math.abs(pos2SetX - pos1SetX), Math.abs(pos2SetY - pos1SetY));
+                document.getElementById('distance').innerHTML = `Distance is ${distance}`;
+            }
+        </script>
 </body>
 
 </html>
